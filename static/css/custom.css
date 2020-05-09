@@ -1,20 +1,40 @@
 body {
-  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #FCFCFC;
+  font-family: sans-serif, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;
+  background-color: #FFFFFF;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+header, footer, time {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 { font-size: 2.1rem; }
 h2 { font-size: 1.9rem; }
+h2:before {
+  content:"#";
+}
 h3 { font-size: 1.7rem; }
+h3:before {
+  content:"##";
+}
 h4,
 h5,
 h6 { font-size: 1.5rem; }
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+h2:before, h3:before {
+  color: #cccccc;
+  margin-right: 10px;
+}
 
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border: 0;
+  border: 1px solid #EEEEEE;
 }
 
 header,
@@ -28,8 +48,8 @@ main {
 }
 
 .container {
-  width: 90%;
-  max-width: 600px;
+  width: 93%;
+  max-width: 700px;
 }
 
 .header-logo img {
@@ -48,22 +68,39 @@ main {
 }
 
 .entry-title {
-  margin-bottom: 0;
+  font-size: 2.1rem;
 }
 
-.entry-title a {
+.entry-title-list {
+  font-size: 1.8rem;
+}
+
+.entry-title-list a {
   text-decoration: none;
+}
+
+section[itemprop="entry-text"] h1 {
+  padding-bottom: 5px;
+  border-bottom: solid 1px #E1E1E1;
 }
 
 .entry-meta {
   display: inline-block;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color: #888;
 }
 
+.entry-tag {
+  background-color: #eee;
+  color: #666;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
 .footer-link {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .hr {
@@ -73,4 +110,43 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#E1E1E1), to(white));
   background: -webkit-linear-gradient(left, white, #E1E1E1, white);
   background: linear-gradient(to right, white, #E1E1E1, white);
+}
+
+blockquote {
+  color: #666666;
+  border-left: solid 2px #cccccc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Consolas, monospace;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 2rem;
+  font-size: 100%;
+  list-style-type: disc;
+}
+
+.booklog_html {
+  width: 80%;
+  background-color: #F8F8F8;
+  /* border: solid 1px #E1E1E1; */
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+
+.booklog_html table {
+  margin-bottom: 0;
+}
+
+.booklog_html th, .booklog_html td {
+  border: none;
 }
